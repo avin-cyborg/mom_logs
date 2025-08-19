@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Logger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page">
+        <h2>Login</h2>
+        <input placeholder="Name" id="name">
+        <input placeholder="Mobile" id="mobile">
+        <input placeholder="Password" id="password" type="password">
+        <button id="login-btn">Login</button>
+        <p id="login-error" style="color:red;"></p>
+    </div>
+
+    <div id="app-page" style="display:none;">
+        <div id="top-bar">
+            <button id="download-btn">⬇ Download Log</button>
+            <button id="delete-btn" style="background:red;color:white;">Delete Log</button>
+        </div>
+        <div id="content"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
